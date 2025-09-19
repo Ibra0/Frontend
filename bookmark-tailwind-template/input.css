@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@tailwind utilities;
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@media (min-width: 1020px) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px;
+    left: 30%;
+    @apply absolute rounded-l-full top-52 bg-softRed;
+  }
+
+  .bg-tabs {
+    width: 2000px;
+    height: 300px;
+    right: 60%;
+    @apply absolute rounded-r-full top-60 bg-blue-600;
+  }
+}
+
+@theme {
+  --container-2xl: 48rem;
+  --color-softBlue: "hsl(231, 69%, 60%)";
+  --color-softRed: "hsl(0, 94%, 66%)";
+  --color-grayishBlue: "hsl(229, 8%, 60%)";
+  --color-veryDarkBlue: "hsl(229, 31%, 21%)";
+}
